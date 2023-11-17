@@ -1,0 +1,25 @@
+{
+    "name": "Find inputs",
+    "version": "0.1.0",
+    "description": "find inputs",
+    "permissions": ["storage", "tabs", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "Find inputs"
+    },
+    "manifest_version": 3
+}
